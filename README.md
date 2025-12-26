@@ -118,4 +118,4 @@ Di bagian ini, mahasiswa diharapkan untuk menyajikan dan menginterpretasikan has
 ## 6. Kesimpulan
 
 Rangkum temuan utama dari analisis Anda dalam beberapa kalimat. Apa wawasan paling penting yang Anda peroleh?
-
+Jawab: Berdasarkan hasil analisis yang sudah dilakukan, dapat disimpulkan bahwa terdapat hubungan yang positif dan cukup kuat antara biaya akuisisi pelanggan dan pendapatan tahunan. Hasil korelasi menunjukkan bahwa semakin besar biaya yang dikeluarkan untuk akuisisi pelanggan, maka pendapatan yang diperoleh juga cenderung meningkat. Hal ini juga didukung oleh pola pada scatter plot yang menunjukkan tren naik. Selain itu, hasil analisis regresi linear menunjukkan bahwa biaya akuisisi pelanggan berpengaruh besar terhadap pendapatan tahunan. Nilai Adjusted R-squared yang tinggi menandakan bahwa model regresi mampu menjelaskan sebagian besar variasi pendapatan. Secara keseluruhan, hasil ini menunjukkan bahwa biaya akuisisi pelanggan memiliki peran penting dalam memengaruhi pendapatan berdasarkan data yang dianalisis.
