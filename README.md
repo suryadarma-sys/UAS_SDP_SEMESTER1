@@ -2,9 +2,9 @@
 
 ## 1. Informasi Penyusun
 
-- **Nama:** `[NAMA LENGKAP MAHASISWA]`
-- **NIM:** `[NOMOR INDUK MAHASISWA]`
-- **Program Studi:** `[PROGRAM STUDI]`
+- **Nama:** `[I MADE SURYA DARMA KRISNA]`
+- **NIM:** `[2515091038]`
+- **Program Studi:** `[SISTEM INFORMASI]`
 - **Mata Kuliah:** Statistika dan Probabilitas
 
 ---
@@ -14,7 +14,7 @@
 Pada bagian ini, jelaskan secara singkat dataset yang Anda gunakan. Apa saja variabel di dalamnya? Apa tujuan dari analisis yang Anda lakukan?
 
 *Contoh:*
-> Dataset yang digunakan adalah data `...` yang berisi informasi tentang `...`. Variabel kunci dalam dataset ini meliputi `variabel_A`, `variabel_B`, dan `variabel_C`. Tujuan dari proyek ini adalah untuk memahami karakteristik data melalui statistik deskriptif, menguji hubungan antara `variabel_A` dan `variabel_B` melalui analisis korelasi, serta memprediksi `variabel_C` menggunakan `variabel_A` sebagai prediktor melalui analisis regresi.
+> Dataset yang digunakan adalah data `data_startup_saas.csv` yang berisi infomasi tentang `File data_startup_saas.csv berisi data beberapa startup yang bergerak di bidang SaaS. Data yang ditampilkan meliputi nama startup, jenis layanan yang ditawarkan, pendapatan tahunan, biaya langganan, nilai pelanggan, serta tingkat churn pelanggan. Data ini digunakan untuk membantu analisis statistik, seperti membandingkan pendapatan antar layanan dan melihat tingkat keberlanjutan pelanggan pada setiap startup.`. Variabel kunci dalam dataset ini meliputi `pendapatan_Tahunan_Miliar_IDR`, `Biaya_Akuisisi_Pelanggan_Juta_IDR`, dan `Nilai_Pelanggan_Juta_IDR`. Tujuan dari proyek ini adalah untuk memahami karakteristik data melalui statistik deskriptif, menguji hubungan antara `pendapatan_Tahunan_Miliar_IDR` dan `Biaya_Akuisisi_Pelanggan_Juta_IDR` melalui analisis korelasi, serta memprediksi `Nilai_Pelanggan_Juta_IDR` menggunakan `pendapatan_Tahunan_Miliar_IDR` sebagai prediktor melalui analisis regresi.
 
 ---
 
@@ -46,31 +46,46 @@ Di bagian ini, mahasiswa diharapkan untuk menyajikan dan menginterpretasikan has
 
 ### 5.1. Statistik Deskriptif
 - **Ukuran Pemusatan (Mean, Median, Modus):**
-  - *Tabel atau ringkasan...*
+  - *Tabel atau ringkasan...
+  - Mean = 31.88"
+  - Median =  31.3"
+  - Modus = 1.87"
   - *Interpretasi:* Jelaskan apa arti dari nilai-nilai tersebut terkait dengan data Anda.
+  - Jawab : Nilai mean sebesar 31,88 menunjukkan rata-rata dari seluruh data yang ada. Median 31,3 berarti posisi tengah data berada di angka tersebut, sehingga setengah data nilainya di bawah 31,3 dan setengahnya lagi di atas. Sementara itu, modus 1,87 adalah nilai yang paling sering muncul. Dari perbedaan nilai mean, median, dan modus ini dapat dilihat bahwa penyebaran data tidak sepenuhnya merata dan kemungkinan ada beberapa data yang nilainya cukup jauh dari yang lain.
 - **Ukuran Sebaran (Standar Deviasi, Range, Kuartil):**
   - *Tabel atau ringkasan...*
+  - Standar Deviasi = 19.79"
+  - Range   = 1 - 66.89"
+  - Kuartil = Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+              1.00   14.31   31.30   31.88   49.04   66.89 
   - *Interpretasi:* Jelaskan seberapa menyebar data Anda berdasarkan nilai-nilai ini.
+  - Jawab : Nilai standar deviasi sebesar 19,79 menunjukkan bahwa data cukup menyebar dari nilai rata-ratanya. Range dari 1 hingga 66,89 menandakan selisih antara nilai terendah dan tertinggi cukup besar, sehingga variasi datanya tergolong tinggi. Berdasarkan nilai kuartil, terlihat bahwa sebagian besar data berada di rentang 14,31 hingga 49,04, dengan median di sekitar 31,30. Hal ini menunjukkan penyebaran data tidak terlalu rapat dan terdapat perbedaan nilai yang cukup jauh antar data.
 - **Visualisasi (Histogram/Boxplot):**
   - *Sematkan gambar plot dari folder /results...*
+  - ![alt text](https://github.com/suryadarma-sys/UAS_SDP_SEMESTER1/blob/main/results/boxplot_Pendapatan_Tahunan_Miliar_IDR.png)
   - *Interpretasi:* Jelaskan wawasan apa yang Anda dapatkan dari bentuk distribusi data.
-
+  - Jawab : Berdasarkan boxplot, terlihat bahwa data pendapatan tahunan memiliki sebaran yang cukup luas. Posisi median berada di bagian tengah, yang menunjukkan bahwa nilai pendapatan tidak terlalu condong ke satu sisi. Jarak antar kuartil yang cukup besar menandakan perbedaan pendapatan antar startup cukup signifikan. Selain itu, garis atas dan bawah yang cukup panjang menunjukkan adanya selisih yang jauh antara pendapatan paling rendah dan paling tinggi. Hal ini mengindikasikan bahwa distribusi pendapatan startup SaaS cenderung bervariasi dan tidak merata.
 ### 5.2. Uji Normalitas
 - **Hasil Uji Shapiro-Wilk:**
   - *Nilai p-value...*
+  -  p-value = 1.497e-14
   - *Interpretasi:* Apakah data Anda terdistribusi normal berdasarkan hasil uji? Apa implikasinya?
+  - Jawab : Nilai p-value sebesar 1,497 × 10⁻¹⁴ jauh lebih kecil dari tingkat signifikansi yang umum digunakan (misalnya 0,05). Hal ini menunjukkan bahwa data tidak terdistribusi normal. Implikasinya, analisis statistik yang mengasumsikan distribusi normal sebaiknya tidak digunakan secara langsung. Oleh karena itu, lebih tepat menggunakan metode nonparametrik atau melakukan transformasi data agar hasil analisis menjadi lebih akurat.
 - **Plot Q-Q:**
   - *Sematkan gambar plot dari folder /results...*
+  - ![alt text](https://github.com/suryadarma-sys/UAS_SDP_SEMESTER1/blob/main/results/qqplot_Pendapatan_Tahunan_Miliar_IDR.png)
   - *Interpretasi:* Apakah titik-titik data mengikuti garis lurus? Apa artinya?
-
+  - jawab : Berdasarkan Q-Q plot, titik-titik data tidak sepenuhnya mengikuti garis lurus. Pada bagian awal dan akhir terlihat penyimpangan yang cukup jelas dari garis referensi. Hal ini menunjukkan bahwa distribusi data tidak normal. Artinya, data pendapatan tahunan memiliki pola sebaran yang menyimpang dari distribusi normal, sehingga analisis yang mengasumsikan normalitas perlu dipertimbangkan kembali atau diganti dengan metode yang lebih sesuai.
 ### 5.3. Analisis Korelasi
 - **Nilai Koefisien Korelasi:**
   - *Nilai r...*
+  - "Koefisien Korelasi (r) = 0.996"
   - *Interpretasi:* Seberapa kuat dan apa arah hubungan antara dua variabel yang Anda uji? (misalnya, korelasi positif kuat, negatif lemah, atau tidak ada korelasi).
+  - jawab : Nilai koefisien korelasi r = 0,996 menunjukkan adanya hubungan yang sangat kuat dan searah (positif) antara kedua variabel yang diuji. Artinya, ketika nilai salah satu variabel meningkat, variabel lainnya juga cenderung ikut meningkat. Besarnya nilai r yang mendekati 1 menandakan bahwa hubungan antar variabel hampir sempurna dan perubahan pada satu variabel sangat berkaitan dengan perubahan pada variabel lainnya.
 - **Visualisasi (Scatter Plot):**
   - *Sematkan gambar plot dari folder /results...*
+  - ![]
   - *Interpretasi:* Apakah pola pada scatter plot mendukung hasil koefisien korelasi?
-
 ### 5.4. Analisis Regresi
 - **Model Regresi:**
   - *Persamaan regresi: Y = b0 + b1*X*
